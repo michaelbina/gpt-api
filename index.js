@@ -18,7 +18,7 @@ const upload = multer({
 });
 
 if(process.env.DOMAIN) {
-  app.use(cors({ origin: `${process.env.DOMAIN}` }));  
+  app.use(cors({ origin: [`${process.env.DOMAIN}`, "https://muse-prompt.herokuapp.com"] }));  
 } else {
   app.use(cors());  
 }
