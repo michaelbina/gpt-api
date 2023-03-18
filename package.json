@@ -32,7 +32,6 @@
       "NODE_ENV": "production",
       "PORT": "3000",
       "CHATGPT_API_KEY": "${CHATGPT_API_KEY}"
-      // Add other environment variables here
     }
   }
 }
