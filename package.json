@@ -32,6 +32,7 @@
     "config": {
       "NODE_ENV": "production",
       "PORT": "3000",
+      "DOMAIN": "${DOMAIN}",
       "CHATGPT_API_KEY": "${CHATGPT_API_KEY}"
     }
   }

@@ -17,9 +17,11 @@ const upload = multer({
     },
 });
 
-app.use(cors({
-  origin: 'https://gpt-api.herokuapp.com'
-}));
+if(process.env.DOMAIN) {
+  app.use(cors({ origin: `${process.env.DOMAIN}` }));  
+} else {
+  app.use(cors());  
+}
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.set('view engine', 'ejs');
